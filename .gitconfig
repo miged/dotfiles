@@ -1,0 +1,24 @@
+[user]
+	name = Miguel
+	email = mige@airmail.cc
+
+[core]
+	editor = vim
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[alias]
+	s  = status 
+	c  = commit
+	ca = commit -a
+	b  = branch
+	co = checkout
+	d  = diff
+	l  = log --graph --decorate
+
+[push]
+	default = current	

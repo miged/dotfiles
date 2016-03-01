@@ -8,5 +8,4 @@ alias ....="cd ../../.."
 
 alias g="git"
 alias v="vim"
-
 alias quit="exit"
