@@ -20,6 +20,7 @@
 	d  = diff
 	l  = log --graph --decorate
 	p  = push
+	po = push origin
 
 [push]
 	default = current	
