@@ -8,4 +8,6 @@ alias ....="cd ../../.."
 
 alias g="git"
 alias v="vim"
+alias h="history | tail -15"
+alias j="jobs"
 alias quit="exit"

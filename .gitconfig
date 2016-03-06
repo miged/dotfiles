@@ -1,6 +1,5 @@
 [user]
 	name = Miguel
-	email = mige@airmail.cc
 
 [core]
 	editor = vim
@@ -21,6 +20,7 @@
 	l  = log --graph --decorate
 	p  = push
 	po = push origin
+	pu = pull
 
 [push]
 	default = current	
