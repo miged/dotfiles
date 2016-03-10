@@ -18,6 +18,7 @@
 	co = checkout
 	d  = diff
 	l  = log --graph --decorate
+	lo = log --oneline
 	p  = push
 	po = push origin
 	pu = pull
