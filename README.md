@@ -6,5 +6,3 @@ My dotfiles for command line stuff. Right now, it's pretty barebones.
 
 1. Clone repo  `git clone git://github.com/miged/dotfiles.git`
 2. Run `install.sh`
-
-**Warning:** This will overwrite the files in your home directory
