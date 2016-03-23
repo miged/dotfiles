@@ -17,3 +17,6 @@ alias v="vim"
 alias h="history | tail -20"
 alias j="jobs"
 alias quit="exit"
+
+setopt nocheckjobs
+setopt nohup
