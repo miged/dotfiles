@@ -1,12 +1,10 @@
 #!/bin/bash
 
-RC="bash_profile zshrc"
-NOLINK="gitconfig"
+RC="bash_profile zshrc gitconfig"
+NOLINK=""
 
 type git >/dev/null 2>&1 || { echo >&2 "Install git first!\n"; exit 1; }
 type zsh >/dev/null 2>&1 || { echo >&2 "Install zsh first!\n"; exit 1; }
-
-git submodule update --init --recursive
 
 link_file()
 {
