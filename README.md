@@ -9,4 +9,4 @@ My dotfiles for command line stuff.
 
 ## zsh
 
-To change your shell to zsh, run `chsh` and enter the value to `/bin/zsh`
+To change your shell to zsh, run `chsh -s` and enter `/bin/zsh`

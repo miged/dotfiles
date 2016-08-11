@@ -1,4 +1,4 @@
-source ./dotfiles/zsh/antigen.zsh
+source ~/.antigen.zsh
 antigen use oh-my-zsh
 
 # Plugins
@@ -27,4 +27,3 @@ compinit
 
 zstyle ':completion:*' menu select yes
 zstyle ':completion:*:default' list-colors ''
-
