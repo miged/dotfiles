@@ -1,29 +1,42 @@
+# Plugins
 source ~/.antigen.zsh
 antigen use oh-my-zsh
-
-# Plugins
 antigen bundles <<EOBUNDLES
 git
 zsh-users/zsh-syntax-highlighting
 kennethreitz/autoenv
-command-not-found
 EOBUNDLES
-
-# Theme
-antigen theme miged/dotfiles zsh/af-magic
 
 antigen apply
 
-alias ls="ls --color=auto --time-style=long-iso"
-alias v="vim"
-alias h="history | tail -20"
-alias j="jobs"
-alias quit="exit"
+# zsh options
+zstyle ':completion:*' menu select yes
+zstyle ':completion:*:default' list-colors ''
 
-setopt nocheckjobs
-setopt nohup
+REPORTTIME=2
+setopt nocheckjobs nohup autocd
 autoload -U compinit
 compinit
 
-zstyle ':completion:*' menu select yes
-zstyle ':completion:*:default' list-colors ''
+# Aliases
+LOPTS='--color=auto --time-style=long-iso'
+alias ls="ls -v $LOPTS"
+alias ll="ls -lav --si $LOPTS"
+alias v="vim"
+alias quit="exit"
+
+# Prompt
+PROMPT='$FG[032]%~$(git_prompt_info) $FG[105]%(!.#.»)%{$reset_color%} '
+PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
+
+if type "virtualenv_prompt_info" > /dev/null
+then
+	RPROMPT='$(virtualenv_prompt_info)$FG[237]%n@%m%{$reset_color%}%'
+else
+	RPROMPT='$FG[237]%n@%m%{$reset_color%}%'
+fi
+
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]("
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_DIRTY="$FG[214]*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
