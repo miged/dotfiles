@@ -1,5 +1,5 @@
 #!/bin/bash
-RC="bash_profile zshrc gitconfig"
+RC="gitconfig tmux.conf zshrc"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 git submodule update --init --recursive -s 2> /dev/null
