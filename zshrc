@@ -13,7 +13,7 @@ antigen apply
 zstyle ':completion:*' menu select yes
 zstyle ':completion:*:default' list-colors ''
 
-REPORTTIME=2
+REPORTTIME=10
 setopt nocheckjobs nohup autocd
 autoload -U compinit
 compinit
@@ -40,3 +40,6 @@ ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]("
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="$FG[214]*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
+
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
