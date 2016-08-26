@@ -1,15 +1,16 @@
 set nocompatible
 set encoding=utf-8
 set autoindent
-set laststatus=2    " always show status line
-set number          " line numbers
-set relativenumber  " relative line numbers
-set ruler           " show cursor position
-set cursorline      " highlight current line
 set scrolloff=2     " minimum lines above/below cursor
 set wildmenu        " enable tab completion
-set noswapfile
 set autoread        " reload changed files
+set history=500
+
+" interface
+set number          " line numbers
+set ruler           " show cursor position all the time
+set laststatus=2    " always show status line
+set relativenumber  " relative line numbers
 
 " search
 set ignorecase
@@ -23,6 +24,11 @@ set shiftwidth=4    " one tab = four spaces (autoindent)
 set softtabstop=4   " one tab = four spaces (tab key)
 set tabstop=4
 
+" vim files
+set noswapfile
+set undodir=~/.vim/undo
+set undofile
+
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
@@ -31,8 +37,15 @@ set list listchars=tab:\ \ ,trail:·
 " Plugins
 call pathogen#infect()
 
-" Ctrl-P settings
 let g:ctrlp_max_files = 10000
+let g:airline_theme='molokai'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""
+" Colors
+set t_Co=256
+syntax enable
+colorscheme molokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""
