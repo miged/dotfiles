@@ -45,7 +45,7 @@ let g:airline_theme='molokai'
 " Colors
 set t_Co=256
 syntax enable
-colorscheme molokai
+colorscheme twilight
 
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -57,3 +57,7 @@ let g:mapleader = ","
 nnoremap - :tabprevious<CR>
 nnoremap = :tabnext<CR>
 
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>

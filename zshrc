@@ -1,8 +1,8 @@
 # Plugins
 source ~/.antigen.zsh
 antigen use oh-my-zsh
+
 antigen bundles <<EOBUNDLES
-git
 zsh-users/zsh-syntax-highlighting
 kennethreitz/autoenv
 EOBUNDLES
@@ -15,8 +15,6 @@ zstyle ':completion:*:default' list-colors ''
 
 REPORTTIME=10
 setopt nocheckjobs nohup autocd
-autoload -U compinit
-compinit
 
 # Aliases
 LOPTS='--color=auto --time-style=long-iso'

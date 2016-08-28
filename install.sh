@@ -1,5 +1,5 @@
 #!/bin/bash
-RC="gitconfig tmux.conf zshrc vim vimrc"
+RC="gitconfig tmux.conf zsh zshrc vim vimrc"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 git submodule update --init --recursive
@@ -13,7 +13,7 @@ for file in $RC; do
     echo "Not linking $file, it has my name in it! Do it yourself"
   else
     if [[ $(readlink -f $HOME/$file) != $(readlink -f $here/$file) ]]; then
-      ln -i -s -T -v $DIR/$file $HOME/.$file
+      ln -isTV $DIR/$file $HOME/.$file
     fi
   fi
 done
