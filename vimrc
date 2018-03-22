@@ -5,6 +5,7 @@ set scrolloff=2     " minimum lines above/below cursor
 set wildmenu        " enable tab completion
 set autoread        " reload changed files
 set history=500
+set lazyredraw
 
 " interface
 set number          " line numbers
@@ -25,9 +26,11 @@ set softtabstop=4   " one tab = four spaces (tab key)
 set tabstop=4
 
 " vim files
-set noswapfile
-set undodir=~/.vim/undo
-set undofile
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+set writebackup                 " temp backup during write
+set undodir=~/.vim/undo         " persistent undo storage
+set undofile                    " persistent undo on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -39,13 +42,14 @@ call pathogen#infect()
 
 let g:ctrlp_max_files = 10000
 let g:airline_theme='molokai'
+"let g:airline_powerline_fonts = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""
 " Colors
-set t_Co=256
+set t_Co=256  " force 256 colors
 syntax enable
-colorscheme twilight
+colorscheme molokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -57,7 +61,7 @@ let g:mapleader = ","
 nnoremap - :tabprevious<CR>
 nnoremap = :tabnext<CR>
 
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+" Allow for local overrides
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif

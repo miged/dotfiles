@@ -22,6 +22,7 @@ alias ls="ls -v $LOPTS"
 alias ll="ls -lav --si $LOPTS"
 alias v="vim"
 alias quit="exit"
+alias g="git"
 
 # Prompt
 PROMPT='$FG[032]%~$(git_prompt_info) $FG[105]%(!.#.»)%{$reset_color%} '
