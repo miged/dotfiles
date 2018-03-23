@@ -1,19 +1,19 @@
 #!/bin/bash
-RC="gitconfig tmux.conf zsh zshrc vim vimrc"
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 git submodule update --init --recursive
-ln -s -T $DIR/zsh/antigen.zsh $HOME/.antigen.zsh 2> /dev/null
+ln -sT $DIR/zsh/antigen.zsh $HOME/.antigen.zsh 2> /dev/null
 
 echo 'Building YouCompleteMe...'
 ( cd vim/bundle/YouCompleteMe; ./install.sh --clang-completer )
 
-for file in $RC; do
+echo 'linking files...'
+here="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+for file in gitconfig tmux.conf zsh zshrc vim vimrc; do
   if [[ $file == '.gitconfig' && $USER != 'mige' && $USER != 'miguel' ]]; then
     echo "Not linking $file, it has my name in it! Do it yourself"
   else
-    if [[ $(readlink -f $HOME/$file) != $(readlink -f $here/$file) ]]; then
-      ln -isTV $DIR/$file $HOME/.$file
+    if [[ $(readlink -f $HOME/.$file) != $(readlink -f $here/$file) ]]; then
+      ln -sTf $here/$file $HOME/.$file
+      echo "linked $file"
     fi
   fi
 done
