@@ -10,5 +10,6 @@ abbr cat 'bat'
 abbr top 'btop'
 abbr vim 'nvim'
 abbr g 'git'
+abbr cl 'clear'
 
 starship init fish | source
