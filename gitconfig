@@ -1,8 +1,5 @@
-[user]
-    name = Miguel
-
 [core]
-    editor = vim
+    editor = nvim
 
 [color]
     diff = auto
@@ -24,4 +21,4 @@
     pu = pull
 
 [push]
-    default = current	
+    default = current
