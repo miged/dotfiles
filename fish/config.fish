@@ -12,4 +12,6 @@ abbr vim 'nvim'
 abbr g 'git'
 abbr cl 'clear'
 
-starship init fish | source
+if command -q starship
+    starship init fish | source
+end
