@@ -2,9 +2,9 @@ set fish_greeting
 set EDITOR 'nvim'
 
 # Aliases
-abbr ls 'eza'
-abbr ll 'eza -l'
-abbr la 'eza -la'
+abbr ls 'eza --icons'
+abbr ll 'eza --icons -l'
+abbr la 'eza --icons -la'
 
 abbr cat 'bat'
 abbr top 'btop'
