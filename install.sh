@@ -1,13 +1,12 @@
 #!/bin/bash
 git submodule update --init --recursive
-ln -sT $DIR/zsh/antigen.zsh $HOME/.antigen.zsh 2> /dev/null
 
 echo 'Building YouCompleteMe...'
 ( cd vim/bundle/YouCompleteMe; ./install.sh --clang-completer )
 
 echo 'linking files...'
 here="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-for file in gitconfig tmux.conf zsh zshrc vim vimrc; do
+for file in gitconfig vim vimrc; do
   if [[ $file == '.gitconfig' && $USER != 'mige' && $USER != 'miguel' ]]; then
     echo "Not linking $file, it has my name in it! Do it yourself"
   else
