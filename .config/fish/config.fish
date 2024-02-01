@@ -12,6 +12,8 @@ abbr vim 'nvim'
 abbr g 'git'
 abbr cl 'clear'
 
+source $HOME/.config/fish/config_local.fish
+
 if command -q starship
     starship init fish | source
 end
