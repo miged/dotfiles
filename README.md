@@ -4,9 +4,6 @@ My dotfiles for command line stuff.
 
 ## Usage
 
-1. Clone repo  `git clone https://github.com/miged/dotfiles.git`
-2. Run `install.sh`
+1. Clone repo `git clone https://github.com/miged/dotfiles.git`
 
-## zsh
-
-To change shell to zsh, run `chsh -s /bin/zsh`
+2. Run stow `stow .`
