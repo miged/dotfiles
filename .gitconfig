@@ -1,3 +1,7 @@
+[user]
+    name = Miguel
+    email = mige.d@outlook.com
+
 [core]
     editor = nvim
 
