@@ -37,15 +37,6 @@ set list listchars=tab:\ \ ,trail:·
 
 
 """""""""""""""""""""""""""""""""""""""""""""
-" Plugins
-call pathogen#infect()
-
-let g:ctrlp_max_files = 10000
-let g:airline_theme='molokai'
-"let g:airline_powerline_fonts = 1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 set t_Co=256  " force 256 colors
 syntax enable
