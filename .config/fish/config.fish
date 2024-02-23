@@ -17,5 +17,11 @@ if [ -f $HOME/.config/fish/local.fish ]
 end
 
 if command -q starship
-    starship init fish | source
+  starship init fish | source
+end
+
+if command -q zoxide
+  zoxide init fish | source
+  abbr cd 'z'
+  abbr cdi 'zi'
 end
