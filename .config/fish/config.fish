@@ -13,17 +13,33 @@ abbr top 'btop'
 abbr vim 'nvim'
 abbr g 'git'
 abbr cl 'clear'
+abbr rm 'rm -I'
 
+# Functions
+function cheat
+  curl cheat.sh/$argv
+end
+
+function ytm
+  mpv "ytdl://ytsearch1:$argv"
+end
+
+# Misc
+if status --is-interactive
+  if command -q starship
+    starship init fish | source
+    #  enable_transience
+  end
+
+  if command -q zoxide
+    zoxide init fish | source
+    abbr cd 'z'
+    abbr cdi 'zi'
+  end
+end
+
+
+# Load local config
 if [ -f $HOME/.config/fish/local.fish ]
     source $HOME/.config/fish/local.fish
-end
-
-if command -q starship
-  starship init fish | source
-end
-
-if command -q zoxide
-  zoxide init fish | source
-  abbr cd 'z'
-  abbr cdi 'zi'
 end

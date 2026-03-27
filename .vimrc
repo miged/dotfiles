@@ -11,7 +11,6 @@ set lazyredraw
 set number          " line numbers
 set ruler           " show cursor position all the time
 set laststatus=2    " always show status line
-set relativenumber  " relative line numbers
 
 " search
 set ignorecase
@@ -40,7 +39,6 @@ set list listchars=tab:\ \ ,trail:·
 " Colors
 set t_Co=256  " force 256 colors
 syntax enable
-colorscheme molokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""

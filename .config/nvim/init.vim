@@ -1,0 +1,1 @@
+/home/mige/dotfiles/.vimrc

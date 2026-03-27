@@ -1,0 +1,24 @@
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="Alacritty"
+    match title="Discover"
+    match app-id="Nautilis"
+    match app-id="Discord"
+
+    default-column-width { proportion 0.6; }
+}
+
+window-rule {
+    match title="Firefox"
+    match app-id="floorp"
+    default-column-width { proportion 0.8; }
+}
+
+layer-rule {
+    match namespace="^noctalia-wallpaper*"
+    //place-within-backdrop true
+}
