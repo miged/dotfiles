@@ -4,7 +4,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Alacritty"
     match title="Discover"
     match app-id="Nautilis"
     match app-id="Discord"
@@ -19,6 +18,6 @@ window-rule {
 }
 
 layer-rule {
-    match namespace="^noctalia-wallpaper*"
-    //place-within-backdrop true
+    match namespace="^noctalia-overview*"
+    place-within-backdrop true
 }
