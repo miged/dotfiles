@@ -16,6 +16,8 @@ window-rule {
     match title="Firefox"
     match app-id="floorp"
     match app-id="zed"
+    match app-id="Godot"
+    match app-id="Unity"
 
     default-column-width { proportion 0.8; }
 }
