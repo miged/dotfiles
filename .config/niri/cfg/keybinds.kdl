@@ -9,14 +9,13 @@ binds {
     Mod+Shift+Slash                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
+    Mod+Return repeat=false             hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: floorp" { spawn-sh "flatpak run one.ablaze.floorp"; }
+    Mod+E repeat=false                  hotkey-overlay-title="File Manager: Dolphin" { spawn "dolphin"; }
+    Mod+B repeat=false                  hotkey-overlay-title="Open Browser: floorp" { spawn-sh "flatpak run one.ablaze.floorp"; }
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
-    // Please choose your own file manager.
-    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
@@ -58,15 +57,15 @@ binds {
     Mod+CTRL+Home                       { move-column-to-first; }
     Mod+CTRL+End                        { move-column-to-last; }
 
-    Mod+Shift+Left                      { focus-monitor-left; }
-    Mod+Shift+Right                     { focus-monitor-right; }
-    Mod+Shift+UP                        { focus-monitor-up; }
-    Mod+Shift+Down                      { focus-monitor-down; }
+    Mod+Shift+Left                      { move-column-to-monitor-left; }
+    Mod+Shift+Right                     { move-column-to-monitor-right; }
+    Mod+Shift+UP                        { move-column-to-monitor-up; }
+    Mod+Shift+Down                      { move-column-to-monitor-down; }
 
-    Mod+Shift+CTRL+Left                 { move-column-to-monitor-left; }
-    Mod+Shift+CTRL+Right                { move-column-to-monitor-right; }
-    Mod+Shift+CTRL+UP                   { move-column-to-monitor-up; }
-    Mod+Shift+CTRL+Down                 { move-column-to-monitor-down; }
+    Mod+Shift+CTRL+Left                 { focus-monitor-left; }
+    Mod+Shift+CTRL+Right                { focus-monitor-right; }
+    Mod+Shift+CTRL+UP                   { focus-monitor-up; }
+    Mod+Shift+CTRL+Down                 { focus-monitor-down; }
 
     // ─── Workspace Switching ───
     Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
@@ -119,6 +118,7 @@ binds {
     Mod+V                               { toggle-window-floating; }
     Mod+Shift+V                         { switch-focus-between-floating-and-tiling; }
     Mod+CTRL+F                          { maximize-column; }
+    Mod+ALT+F                           { fullscreen-window; }
     Mod+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
