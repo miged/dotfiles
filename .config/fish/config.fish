@@ -11,6 +11,7 @@ end
 abbr cat 'bat'
 abbr top 'btop'
 abbr vim 'nvim'
+abbr y 'yazi'
 abbr g 'git'
 abbr cl 'clear'
 abbr rm 'rm -I'

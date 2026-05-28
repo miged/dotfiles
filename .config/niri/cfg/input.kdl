@@ -32,6 +32,6 @@ input {
         // calibration-matrix 1.0 0.0 0.0 0.0 1.0 0.0
     }
 
-    focus-follows-mouse // Automatically focus windows under the mouse pointer
+    focus-follows-mouse max-scroll-amount="50%" // Automatically focus windows under the mouse pointer
     workspace-auto-back-and-forth // Enable workspace back & forth switching
 }
