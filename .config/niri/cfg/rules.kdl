@@ -36,11 +36,11 @@ window-rule {
 
 window-rule {
     match app-id="wivrn"
-    match app-id="slimevr"
-
     default-window-height { proportion 0.5; }
 }
 
+
+// Layers
 layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
