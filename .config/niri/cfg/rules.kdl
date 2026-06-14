@@ -6,8 +6,18 @@ window-rule {
     }
 }
 
+workspace "main" {
+    open-on-output "DP-2"
+}
+
 window-rule {
-    match app-id="discover"
+    match title="Calculator"
+
+    default-column-width { proportion 0.1; }
+    default-window-height { proportion 0.5; }
+}
+
+window-rule {
     match app-id="Nautilis"
     match app-id="Discord"
     match app-id="obsidian"
@@ -21,9 +31,8 @@ window-rule {
 window-rule {
     match app-id="firefox"
     match app-id="floorp"
-    match app-id="Godot"
+    match title="Godot"
     match app-id="Unity"
-    match app-id="krita"
 
     default-column-width { proportion 0.8; }
 }
@@ -36,13 +45,14 @@ window-rule {
 
 window-rule {
     match app-id="wivrn"
-    default-window-height { proportion 0.5; }
+    default-window-height { proportion 0.4; }
 }
 
 
 // Layers
 layer-rule {
     match namespace="^noctalia-overview*"
+    match namespace="^noctalia-wallpaper*"
     place-within-backdrop true
 }
 
