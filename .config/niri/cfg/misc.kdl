@@ -13,7 +13,7 @@ environment {
 
 cursor {
     xcursor-theme "breeze_cursors"
-    //hide-after-inactive-ms 5000
+    //hide-after-inactive-ms 10000
 }
 
 debug {

@@ -12,6 +12,13 @@ window-rule {
 }
 
 window-rule {
+    match is-floating=true
+    background-effect {
+        xray false
+    }
+}
+
+window-rule {
     match title="Calculator"
 
     default-column-width { proportion 0.1; }
@@ -51,6 +58,7 @@ window-rule {
 
 window-rule {
     match app-id="mpv"
+    match app-id="org.kde.ark"
     open-floating true
 }
 
@@ -62,7 +70,7 @@ layer-rule {
 }
 
 layer-rule {
-    match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+    match namespace="^noctalia"
     background-effect {
         xray false
     }
