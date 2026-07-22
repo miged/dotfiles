@@ -27,7 +27,7 @@ window-rule {
 
 window-rule {
     match app-id="Nautilis"
-    match app-id="Discord"
+    match app-id="discord"
     match app-id="obsidian"
     match app-id="nomacs"
     match app-id="zed"
